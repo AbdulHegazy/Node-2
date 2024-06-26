@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="../js/color-modes.js"></script>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-icons-1.10.5/font/bootstrap-icons.min.css"
+    />
+    <link rel="shortcut icon" href="../img/LH.png" type="image/x-icon">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.112.5" />
+    <title>Edit page</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/dark.light.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/myStyle.css" />
+  </head>
+  <body>
+    <%- include('../Components/dark.light.ejs') %>
+
+
+    <main class="d-flex flex-nowrap">
+      <%- include('../Components/sidebar.ejs', {currentpage: "search"}) %>
+
+
+      <section class="w-100">
+        <%- include('../Components/viewnavbar.ejs') %>
+
+        <nav
+          style="width: 88%"
+          class="px-2 mt-4 d-flex flex-wrap justify-content-between"
+          aria-label="breadcrumb"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <%= data.hotelName %>
+            </li>
+          </ol>
+
+          <p class=" ">
+            <span class="fw-medium fs-6">Id :</span> <%= data.id %>
+          </p>
+        </nav>
+
+        <table
+          style="width: 85%"
+          class="ms-1 table mt-5 table-striped table-bordered"
+        >
+          <thead>
+            <tr>
+              <th scope="col">Hotel Name</th>
+              <th class="fw-normal" scope="col"> <%= data.hotelName %> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Code</th>
+              <td><%= data.code %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Onsite Tel</th>
+              <td><%= data.onsiteTel %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Address</th>
+              <td><%= data.address %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Website</th>
+              <td><%= data.webSite %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">MEWs ID</th>
+              <td><%= data.mewsId %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">AM</th>
+              <td><%= data.am %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">GM</th>
+              <td><%= data.gm %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Vault</th>
+              <td><%= data.vault %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Policy</th>
+              <td><%= data.policy %></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/sidebars.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
